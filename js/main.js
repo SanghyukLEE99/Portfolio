@@ -2,10 +2,18 @@
 	
 	'use strict';
 
+	
 var visitorCount = localStorage.getItem('visitorCount') ? parseInt(localStorage.getItem('visitorCount')) : 0;
     visitorCount++;
     localStorage.setItem('visitorCount', visitorCount);
-    document.getElementById('visitorCount').innerText = visitorCount;
+
+    // 'DOMContentLoaded' 이벤트 리스너 추가
+    document.addEventListener('DOMContentLoaded', function() {
+        var visitorCountElement = document.getElementById('visitorCount');
+        if (visitorCountElement) {
+            visitorCountElement.innerText = visitorCount;
+        }
+    });
 
 	var isMobile = {
 		Android: function() {
