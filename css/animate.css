@@ -3286,3 +3286,8 @@ Copyright (c) 2015 Daniel Eden
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp;
 }
+
+var visitorCount = localStorage.getItem('visitorCount') ? parseInt(localStorage.getItem('visitorCount')) : 0;
+    visitorCount++;
+    localStorage.setItem('visitorCount', visitorCount);
+    document.getElementById('visitorCount').innerText = visitorCount;
