@@ -7,7 +7,7 @@ var visitorCount = localStorage.getItem('visitorCount') ? parseInt(localStorage.
     visitorCount++;
     localStorage.setItem('visitorCount', visitorCount);
 
-    // 'DOMContentLoaded' 이벤트 리스너 추가
+ 
     document.addEventListener('DOMContentLoaded', function() {
         var visitorCountElement = document.getElementById('visitorCount');
         if (visitorCountElement) {
