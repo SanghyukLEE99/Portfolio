@@ -3,17 +3,6 @@
 	'use strict';
 
 	
-var visitorCount = localStorage.getItem('visitorCount') ? parseInt(localStorage.getItem('visitorCount')) : 0;
-    visitorCount++;
-    localStorage.setItem('visitorCount', visitorCount);
-
- 
-    document.addEventListener('DOMContentLoaded', function() {
-        var visitorCountElement = document.getElementById('visitorCount');
-        if (visitorCountElement) {
-            visitorCountElement.innerText = visitorCount;
-        }
-    });
 
 	var isMobile = {
 		Android: function() {
